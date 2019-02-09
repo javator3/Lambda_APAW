@@ -49,8 +49,16 @@ public class Main {
 
         titles.forEach(System.out::println);
 
-        System.out.println(titles);
+//       AddInterface add1 = new AddInterface(){
+//
+//           public int calc (int a, int b){
+//               return a+b;
+//           }
+//       };
 
+
+
+        System.out.println(titles);
 
         List<Movie> movieList = movies.stream()
                 .filter(f -> f.getPrice() > 50)
@@ -65,5 +73,19 @@ public class Main {
                 .collect(Collectors.toList());
 
         movieList1.forEach(s -> System.out.println(s.getTitle() + " " + s.getPrice()) );
+        List<String> directors = movies
+                .stream()
+                .map(d -> d.getDirecotr())
+                .collect(Collectors.toList());
+
+
+        System.out.println(directors);
+
+        // lista filmów których cena jest powyżej 40
+
+
+        System.out.println(movieList);
+
+
     }
 }
