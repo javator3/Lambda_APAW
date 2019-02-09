@@ -10,6 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+
         AddInterface add = (a, b) -> a + b;
         add.calc(4, 2);
 
