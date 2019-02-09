@@ -54,7 +54,16 @@ public class Main {
 
         List<Movie> movieList = movies.stream()
                 .filter(f -> f.getPrice() > 50)
-                .filter(f -> f.getTitle().length() > 5)
+                .filter(f -> f.getTitle().length() > 3)
                 .collect(Collectors.toList());
+
+        movieList.forEach(s -> System.out.println(s.getTitle() + s.getPrice()));
+
+
+        List<Movie> movieList1 = movies.stream()
+                .filter(f -> f.getPrice() > 10 && f.getPrice() < 30)
+                .collect(Collectors.toList());
+
+        movieList1.forEach(s -> System.out.println(s.getTitle() + " " + s.getPrice()) );
     }
 }
